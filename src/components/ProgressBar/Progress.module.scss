@@ -1,0 +1,25 @@
+.progress {
+  background: limegreen;
+  height: 3px;
+  width: 100%;
+  transition: 1s ease;
+  position: relative;
+
+  &::before {
+    content: '';
+    background: limegreen;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -6px;
+    right: 0;
+  }
+}
+
+.bg {
+  background: #E0E0E0;
+  height: 2px;
+  width: 100%;
+}

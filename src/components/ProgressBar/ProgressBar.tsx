@@ -1,4 +1,4 @@
-import styles from 'components/Quiz/Quiz.module.scss';
+import styles from './Progress.module.scss';
 import { FC } from 'react';
 
 interface IProgressBarProps {

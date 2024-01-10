@@ -1,8 +1,8 @@
-export interface IQuestionOption {
+export type IQuestionOption = Partial<{
   genderImg: string;
-  button?: string;
-  description?: string;
-}
+  button: string;
+  description: string;
+}>;
 
 export interface IQuestion {
   quizInfo?: string;
@@ -36,24 +36,24 @@ export const getQuestions = (selectedGender: string) => {
       options: [
         {
           genderImg:
-            selectedGender === 'Male' ? '/male/lose_weight.png' : '/female/lose_weight.jpg',
+            selectedGender === 'Male' ? '/male/lose_weight.jpg' : '/female/lose_weight.jpg',
           description: 'Lose weight',
         },
         {
           genderImg:
             selectedGender === 'Male'
-              ? '/male/get_perfect_fit_body.png'
+              ? '/male/get_perfect_fit_body.jpg'
               : '/female/get_perfect_fit_body.jpg',
           description: 'Get perfect fit body',
         },
         {
           genderImg:
-            selectedGender === 'Male' ? '/male/tone_muscles.png' : '/female/tone_muscles.jpg',
+            selectedGender === 'Male' ? '/male/tone_muscles.jpg' : '/female/tone_muscles.jpg',
           description: 'Tone muscles',
         },
         {
           genderImg:
-            selectedGender === 'Male' ? '/male/be_healthier.png' : '/female/be_healthier.jpg',
+            selectedGender === 'Male' ? '/male/be_healthier.jpg' : '/female/be_healthier.jpg',
           description: 'Be healthier',
         },
       ],
@@ -101,7 +101,7 @@ export const getQuestions = (selectedGender: string) => {
     },
     {
       title: 'Enter your email to get your Personal Weight loss Plan!',
-      screenType: 'rowScreen',
+      screenType: 'columnScreen',
       options: [{}],
     },
   ];

@@ -1,9 +1,11 @@
+import styles from './FinalPage.module.scss';
+
 export const FinalPage = () => {
   const handleSubmit = () => {
     console.log();
   };
   return (
-    <div>
+    <div className={styles.pageWrapper}>
       <form onSubmit={handleSubmit}>
         <input type="email" placeholder="Enter your email" />
         <p>
