@@ -1,6 +1,6 @@
 import { Header } from 'components/Header/Header.tsx';
 import styles from './Quiz.module.scss';
-import { getQuestions } from 'services/questions.ts';
+import { getQuestions } from 'helpers/questions.ts';
 import { FC, useState } from 'react';
 import { ProgressBar } from 'components/ProgressBar/ProgressBar.tsx';
 import { GenderItem } from 'components/GenderItem/GenderItem.tsx';
@@ -42,18 +42,21 @@ export const Quiz: FC = () => {
       <h6 className={styles.quizInfo}>{question.quizInfo}</h6>
       <h2>{question.title}</h2>
       <h3>{question.subtitle}</h3>
-      <div className={`${styles.genderWrapper} ${wrapper}`}>
-        {question.options.map((gender, index) => (
-          <GenderItem
-            key={index}
-            item={item}
-            gender={gender}
-            handleGenderSelected={handleGenderSelected}
-            step={step}
-          />
-        ))}
-      </div>
-      {step === questions.length - 1 && <FinalPage />}
+      {step < questions.length - 1 ? (
+        <div className={`${styles.genderWrapper} ${wrapper}`}>
+          {question.options.map((gender, index) => (
+            <GenderItem
+              key={index}
+              item={item}
+              gender={gender}
+              handleGenderSelected={handleGenderSelected}
+              step={step}
+            />
+          ))}
+        </div>
+      ) : (
+        <FinalPage />
+      )}
     </>
   );
 };

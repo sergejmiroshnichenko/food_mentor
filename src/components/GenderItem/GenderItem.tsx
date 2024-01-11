@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IQuestionOption } from 'services/questions.ts';
+import { IQuestionOption } from 'helpers/questions.ts';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import styles from './GenderItem.module.scss';
 

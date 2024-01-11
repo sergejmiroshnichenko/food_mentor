@@ -36,8 +36,8 @@
       "assets/*": [
         "assets/*"
       ],
-      "services/*": [
-        "services/*"
+      "helpers/*": [
+        "helpers/*"
       ]
     },
     /* Linting */

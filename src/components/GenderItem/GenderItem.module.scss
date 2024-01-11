@@ -8,6 +8,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  user-select: none;
 
   &:hover img {
     opacity: 0.7;
@@ -17,22 +18,30 @@
     background: blueviolet;
 
     &:hover {
+      background: #6916b6;
+    }
+
+    &:active, &:focus {
       background: #5d10a4;
     }
   }
 
   &:last-child button {
-    background: forestgreen;
+    background: limegreen;
 
     &:hover {
-      background: #157215;
+      background: #28b428;
+    }
+
+    &:active, &:focus {
+      background: forestgreen;
     }
   }
 
   button {
     width: 100%;
     border-radius: 30px;
-    height: 60px;
+    height: 70px;
     color: white;
     font-size: 20px;
     font-weight: 700;
@@ -40,6 +49,8 @@
     justify-content: center;
     align-items: center;
     gap: 18px;
+    cursor: pointer;
+    border: none;
   }
 
   img {

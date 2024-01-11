@@ -1,4 +1,3 @@
-import './App.css';
 import { Quiz } from 'components/Quiz/Quiz.tsx';
 
 function App() {

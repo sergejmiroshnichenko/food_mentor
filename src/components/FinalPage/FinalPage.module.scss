@@ -1,5 +1,82 @@
 .pageWrapper {
-  button {
-    background: forestgreen;
+  max-width: 440px;
+  margin: 100px auto;
+
+  input {
+    max-width: 408px;
+    border-radius: 30px;
+    outline: none;
+    border: 3px solid limegreen;
+    height: 55px;
+    padding-left: 25px;
+    width: 100%;
+
+    &:hover {
+      border: 3px solid #28b428;
+    }
+
+    &:active, &:focus {
+      border: 3px solid forestgreen;
+    }
+
+    &::placeholder {
+      color: darkslategray;
+      font-size: 14px;
+      font-weight: 600;
+      transform: translateX(-25px);
+    }
   }
+
+  .privacyInfo {
+    display: flex;
+    background: bisque;
+    border-radius: 15px;
+    margin: 170px 0 35px;
+    gap: 5px;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 700;
+    padding: 10px;
+    color: gray;
+    user-select: none;
+
+    svg {
+      font-size: 30px;
+    }
+  }
+
+  button {
+    background: limegreen;
+    color: white;
+    width: 100%;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      background: #28b428;
+    }
+
+    &:active, &:focus {
+      background: forestgreen;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+}
+
+.warning {
+  color: red;
+  margin-top: 10px;
 }
