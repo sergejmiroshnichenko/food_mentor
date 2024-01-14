@@ -8,16 +8,22 @@ interface IGenderItemProps {
   handleGenderSelected: (index: number, gender: string) => void;
   step: number;
   item: string;
+  index: number;
 }
 
-export const GenderItem: FC<IGenderItemProps> = ({ gender, handleGenderSelected, step, item }) => {
+export const GenderItem: FC<IGenderItemProps> = ({
+  gender,
+  handleGenderSelected,
+  step,
+  item,
+  index,
+}) => {
   const handleClick = () => handleGenderSelected(index, String(gender.button));
-  const index = 0;
 
   return (
     <>
       {step === 0 && (
-        <div className={`${styles.genderBox} ${item}`} key={index}>
+        <div className={`${styles.genderBox} ${item}`}>
           <img src={gender.genderImg} alt="gender-image" />
           <button onClick={handleClick}>
             {gender.button} <FaArrowRightLong />
@@ -25,7 +31,7 @@ export const GenderItem: FC<IGenderItemProps> = ({ gender, handleGenderSelected,
         </div>
       )}
       {step > 0 && (
-        <article className={`${styles.genderBox} ${item}`} key={index} onClick={handleClick}>
+        <article className={`${styles.genderBox} ${item}`} onClick={handleClick}>
           <img src={gender.genderImg} alt="gender-image" />
           <h3>{gender.description}</h3>
         </article>

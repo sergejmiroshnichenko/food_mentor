@@ -19,6 +19,7 @@ export const Quiz: FC = () => {
     if (step === 0) {
       setSelectedGender(gender);
     }
+
     setStep(step + 1);
   };
 
@@ -51,6 +52,7 @@ export const Quiz: FC = () => {
               gender={gender}
               handleGenderSelected={handleGenderSelected}
               step={step}
+              index={index}
             />
           ))}
         </div>

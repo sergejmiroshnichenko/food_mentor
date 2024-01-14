@@ -9,13 +9,13 @@
   .container {
     width: 250px;
     height: 50px;
-    background: #21AD36;
+    background: var(--primary-color-active);
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-radius: 4px;
     padding: 10px;
-    color: white;
+    color: var(--white-color);
     font-weight: 500;
     animation: show-loader 3s forwards;
   }
@@ -43,11 +43,11 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--white-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #21AD36;
+    color: var(--primary-color-active);
     font-weight: 700;
   }
 }

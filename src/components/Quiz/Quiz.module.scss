@@ -1,5 +1,5 @@
 .quizInfo {
-  color: grey;
+  color: var(--gray-color);
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -24,12 +24,12 @@ h3 {
 
 .primaryDisplay {
   flex-direction: row;
-  max-width: 900px;
+  max-width: var(--primary-display--width);
 }
 
 .secondaryDisplay {
   flex-direction: column;
-  max-width: 420px;
+  max-width: var(--secondary-display--width);
 }
 
 .primaryBox {

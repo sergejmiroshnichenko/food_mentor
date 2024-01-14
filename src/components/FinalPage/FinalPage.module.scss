@@ -4,19 +4,19 @@
 
   input {
     max-width: 408px;
-    border-radius: 30px;
+    border-radius: var(--main-border-radius);
     outline: none;
-    border: 3px solid limegreen;
+    border: 3px solid var(--primary-color);
     height: 55px;
     padding-left: 25px;
     width: 100%;
 
     &:hover {
-      border: 3px solid #28b428;
+      border: 3px solid var(--primary-color-hover);
     }
 
     &:active, &:focus {
-      border: 3px solid forestgreen;
+      border: 3px solid var(--primary-color-active);
     }
 
     &::placeholder {
@@ -29,7 +29,7 @@
 
   .privacyInfo {
     display: flex;
-    background: bisque;
+    background: var(--privacy-info-color);
     border-radius: 15px;
     margin: 170px 0 35px;
     gap: 5px;
@@ -37,7 +37,7 @@
     text-align: left;
     font-weight: 700;
     padding: 10px;
-    color: gray;
+    color: var(--gray-color);
     user-select: none;
 
     svg {
@@ -46,26 +46,18 @@
   }
 
   button {
-    background: limegreen;
-    color: white;
-    width: 100%;
-    border-radius: 30px;
+    background: var(--primary-color);
     height: 60px;
     font-size: 18px;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 18px;
-    cursor: pointer;
-    border: none;
-
+    
     &:hover {
-      background: #28b428;
+      background: var(--primary-color-hover);
     }
 
     &:active, &:focus {
-      background: forestgreen;
+      background: var(--primary-color-active);
     }
 
     &:disabled {
@@ -77,6 +69,6 @@
 }
 
 .warning {
-  color: red;
+  color: var(--warning-color);
   margin-top: 10px;
 }

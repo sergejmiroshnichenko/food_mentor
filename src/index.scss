@@ -18,6 +18,17 @@ body {
     height: 100vh;
 }
 
+button {
+    width: 100%;
+    border-radius: var(--main-border-radius);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+
 #root {
     max-width: 1160px;
     margin: 0 auto;

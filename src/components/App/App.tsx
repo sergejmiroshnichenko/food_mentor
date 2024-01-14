@@ -1,3 +1,4 @@
+import '../../variables.scss';
 import { Quiz } from 'components/Quiz/Quiz.tsx';
 
 function App() {
